@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Staples-o</title>
+<body>
+<center>
+<h3>Access code</h3>
+<h5 id="code">CODE</h5>
+</center>
+<script type="javascript">
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+document.getElementById("code").innerHTML = getParameterByName("code"); 
+</script>
+</body>
+</html>
