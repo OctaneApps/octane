@@ -1,0 +1,36 @@
+[
+  {
+    "sourceName": "PHONE",
+    "packageName": "com.argonremote.notificationgenerator",
+    "title": {
+      "pattern": "(.*)",
+      "attribute": [
+        "NAME"
+      ]
+    },
+    "content": {
+      "pattern": "(.*) (.*)",
+      "attribute": [
+        "MESSAGE",
+        "AMOUNT"
+      ]
+    }
+  },
+  {
+    "sourceName": "PHONE",
+    "packageName": "com.whatsapp",
+    "title": {
+      "pattern": "(.*)",
+      "attribute": [
+        "NAME"
+      ]
+    },
+    "content": {
+      "pattern": "(.*) (.*)",
+      "attribute": [
+        "MESSAGE",
+        "AMOUNT"
+      ]
+    }
+  }
+]
