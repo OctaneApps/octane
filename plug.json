@@ -1,36 +1,54 @@
-[
-  {
-    "sourceName": "PHONE",
-    "packageName": "com.argonremote.notificationgenerator",
+[{
+    "sourceName": "GPay",
+    "packageName": "com.google.android.apps.walletnfcrel",
+    "background": true,
     "title": {
-      "pattern": "(.*)",
-      "attribute": [
-        "NAME"
-      ]
+        "pattern":"(.*?) paid you ₹([0-9.]+)",
+        "attribute": ["NAME", "AMOUNT"]
+        
     },
-    "content": {
-      "pattern": "(.*) (.*)",
-      "attribute": [
-        "MESSAGE",
-        "AMOUNT"
-      ]
+    "content" : {
+        "pattern":"(.*.)",
+        "attribute": ["MESSAGE"]
+        
     }
-  },
-  {
-    "sourceName": "PHONE",
-    "packageName": "com.whatsapp",
+},{
+    "sourceName": "Paytm WALLET",
+    "packageName": "net.one97.paytm",
+    "content": {
+        "pattern":"Received\sRs.\s*([0-9.]+)\s*from\s*(.*?)\s*in your Paytm Wallet for\s*(.*.)",
+        "attribute": ["AMOUNT", "NAME", "MESSAGE"]
+        
+    },
+    "title" : {
+        "pattern":"",
+        "attribute": []
+        
+    }
+},{
+    "sourceName": "Paytm UPI",
+    "packageName": "net.one97.paytm",
     "title": {
-      "pattern": "(.*)",
-      "attribute": [
-        "NAME"
-      ]
+        "pattern":"<PATTERN>",
+        "attribute": []
+        
     },
-    "content": {
-      "pattern": "(.*) (.*)",
-      "attribute": [
-        "MESSAGE",
-        "AMOUNT"
-      ]
+    "content" : {
+        "pattern":"You have received\s*Rs.\s*([0-9.]+)\s*from\s*(.*?)\s*\(.*?\).",
+        "attribute": ["AMOUNT","NAME"]
+        
     }
-  }
-]
+},{
+    "sourceName": "BHIM UPI",
+    "packageName": "in.org.npci.upiapp",
+    "title": {
+        "pattern":"<PATTERN>",
+        "attribute": []
+        
+    },
+    "content" : {
+        "pattern":"Received INR\s*([0-9.]+)\s*in your\s*.*?\s*Bank account\(.*?\)\s*from\s*(.*?)\s*\(.*?\).",
+        "attribute": ["AMOUNT","NAME"]
+        
+    }
+}]
