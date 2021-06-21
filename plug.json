@@ -1,4 +1,18 @@
 [{
+    "sourceName": "Octane App",
+    "packageName": "com.codelaps.octane",
+    "background": true,
+    "title": {
+        "pattern":"(.*?) paid you ₹([0-9.]+)",
+        "attribute": ["NAME", "AMOUNT"]
+        
+    },
+    "content" : {
+        "pattern":"(.*.)",
+        "attribute": ["MESSAGE"]
+        
+    }
+},{
     "sourceName": "GPay",
     "packageName": "com.google.android.apps.walletnfcrel",
     "background": true,
